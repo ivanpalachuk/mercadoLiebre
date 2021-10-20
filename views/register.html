@@ -50,17 +50,17 @@
         <div class="contenedor-formularios">
             <form action="/registro" method="#">
                 <div class="datosUsuario">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido"><br>
-                    <input type="text" name="usuario" id="usuario" placeholder="Usuario"><br>
-                    <input type="email" name="email" id="apellido" placeholder="E-mail"></div>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido" minlength="8" required><br>
+                    <input type="text" name="usuario" id="usuario" placeholder="Usuario" minlength="8" required><br>
+                    <input type="email" name="email" id="apellido" placeholder="E-mail" required></div>
                 <div class="demograficos">
                     <h4 class="tituloFecha"><label for="fecha">Fecha de nacimiento</label></h4>
-                    <input type="date" name="fecha" id="fecha">
+                    <input type="date" name="fecha" id="fecha" required>
                     <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
                 </div>
                 <div class="perfil-usuario">
                     <label for="perfil" class="titulo-perfil">Perfil de usuario</label>
-                    <div class="contenedor-perfil">
+                    <div class="contenedor-perfil" }>
                         <input type="radio" name="perfil">Comprador
                         <input type="radio" name="perfil">Vendedor</div>
                 </div>
@@ -78,9 +78,9 @@
                 <div class="fotoPerfil"><label for="fotoUser" name="fotoUser" id="titulo-foto">Foto de perfil</label>
                     <input type="file" name="fotoUser" id="boton-foto-perfil"></div>
                 <div class="contenedor-contraseña"><label for="password" name="password" id="password">Crea tu contraseña</label>
-                    <input type="password" name="password" id="pass">
+                    <input type="password" name="password" id="pass" minlength="10">
                     <label for="confirm-password" name="confirm-password" id="confirm-password">Confirma tu contraseña</label>
-                    <input type="password" name="confirm-password" id="confirmpass"></div>
+                    <input type="password" name="confirm-password" id="confirmpass" required></div>
                 <div class="botonera-confirm"><button type="submit" id="send">Enviar</button>
                     <button type="reset" id="delete">Borrar</button></div>
 
