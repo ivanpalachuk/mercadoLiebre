@@ -118,10 +118,16 @@
         padding: 15 0 15 15;
         background-color: white;
         transition: all 1000ms;
+        justify-content: center;
     }
     
     article:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        cursor: pointer;
+    }
+    
+    article:hover .fa-truck {
+        transform: rotate(-90deg);
     }
     
     .fa-truck {
@@ -137,10 +143,6 @@
         top: 30px;
         right: 30px;
         transition: all 450ms;
-    }
-    
-    .fa-truck:hover {
-        transform: rotate(-90deg);
     }
     
     h2 {
@@ -189,6 +191,7 @@
         display: flex;
         flex-wrap: wrap;
         padding: 15px;
+        align-items: center;
     }
     
     .contenedor-precios-descuentos {
@@ -222,7 +225,9 @@
     #apellido,
     #usuario,
     #domicilio,
-    #fecha {
+    #fecha,
+    #pass,
+    #confirmpass {
         width: 200px;
         margin: 10px;
         font-weight: 600;
@@ -231,6 +236,7 @@
         border: none;
         padding: 5px;
         color: #666666;
+        border-radius: 3px;
     }
     
     form {
@@ -307,8 +313,60 @@
     }
     
     #password,
-    #confirm-password {
+    #confirmpass {
         margin: 10px;
+    }
+    
+    #pass,
+    #confirmpass {
+        border: none;
+    }
+    
+    #send,
+    #delete {
+        font-weight: 300;
+    }
+    
+    .contenedor-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contenedor-login #pass,
+    .contenedor-login #usuario,
+    .contenedor-login #login {
+        font-size: 12px;
+        margin: 15px;
+        width: 75%;
+        border-radius: 3px;
+        max-width: 500px;
+    }
+    
+    #login {
+        background-color: white;
+        height: 25px;
+        transition: 250ms;
+        border: #666666
+    }
+    
+    #login:hover {
+        background-color: #1259c3;
+        border: none;
+        height: 25px;
+    }
+    
+    #textologin {
+        color: #666666;
+        transition: 250ms;
+    }
+    
+    #textologin:hover {
+        color: white;
+        font-weight: 300;
+        font-size: 12;
     }
     
     @media (min-width: 360px) {
@@ -329,16 +387,18 @@
     
     @media (min-width:768px) {
         .descripciones {
-            display: unset;
+            display: none;
             font-weight: 300;
+            transition: all 450ms;
+        }
+        article:hover .descripciones {
+            display: block;
         }
         .slogan {
             align-self: center;
             justify-content: flex-end;
             font-size: 14px;
             text-align: right;
-            position: relative;
-            top: 15px
         }
         .burger {
             display: none;
