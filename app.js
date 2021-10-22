@@ -2,6 +2,7 @@ const express = require("express")
 const app = express()
 const path = require("path")
 const publicPath = path.resolve(__dirname, "./public")
+const port = process.env.PORT || 3000;
 
 let home = "./views/home.html"
 let ayuda = "./views/ayuda.html"
@@ -13,7 +14,7 @@ let oficiales = "./views/oficiales.html"
 let vender = "./views/vender.html"
 
 app.use('/', express.static(publicPath));
-app.listen(3057, () => console.log("Server mercadoliebre corriendo en puerto 3057")) //ojo abajo de 1024//
+app.listen(port, () => console.log("Server mercadoliebre corriendo en puerto 3000")) //ojo abajo de 1024//
 
 app.get("/", (req, res) => res.sendFile(path.join(__dirname, home)))
 app.get("/home", (req, res) => res.sendFile(path.join(__dirname, home)))
