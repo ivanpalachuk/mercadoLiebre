@@ -1,7 +1,7 @@
     * {
         box-sizing: border-box;
         font-family: Roboto;
-        font-weight: bold;
+        font-weight: 400;
         margin: 0px;
         padding: 0px;
     }
@@ -83,6 +83,7 @@
         padding: 15px;
         margin: auto;
         margin-top: 10px;
+        font-weight: bold;
     }
     
     .container-search {
@@ -403,6 +404,7 @@
             font-size: 14px;
             text-align: right;
             margin-bottom: 5px;
+            font-weight: bold;
         }
         .burger {
             display: none;
